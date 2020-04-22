@@ -1,4 +1,4 @@
-# Power Plant
+# Rose Music Player
 
 Music player built on top of DFPlayer Mini and ESP32 to play music during the day and white noise during the night
 
@@ -6,11 +6,11 @@ Music player built on top of DFPlayer Mini and ESP32 to play music during the da
 
 ## Tools and components
 
-- 1 ESP32 + Cable
-- 1 DFPlayer Mini + 1 micro SD
-- 4 push buttons
-- 4 10Komhs resistors (pull-up)
-- 1 1k ohms (tx-rx)
+- ESP32 + Cable
+- DFPlayer Mini + micro SD
+- 4*push buttons
+- 4*10Komhs resistors (pull-up)
+- 1*1k ohms (tx-rx)
 - Some wires and a breadboard
 
 ## How does it work ?
