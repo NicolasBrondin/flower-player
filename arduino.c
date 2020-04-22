@@ -69,7 +69,7 @@ void loop()
 }
 
 void nextSong(){
-	songNumber = ((songNumber)%(songsCount-1))+1;
+	songNumber = ((songNumber)%(songsCount-1))+1; //Needs to be checked, might jump songs
 	myDFPlayer.playFolder(2, songNumber);
 }
 
@@ -81,20 +81,20 @@ void checkButton(){
 	int next = digitalRead(nextPin);
 
 	if(volumeDown == 1){
-		myDFPlayer.volumeDown(); //Dirty
+		myDFPlayer.volumeDown(); //Dirty [TO-DO]
 		myDFPlayer.volumeDown();
 		myDFPlayer.volumeDown();
 		delay(500);
 	}
 	if(volumeUp == 1){
-		myDFPlayer.volumeUp();
+		myDFPlayer.volumeUp(); //Dirty [TO-DO]
 		myDFPlayer.volumeUp();
 		myDFPlayer.volumeUp();
 		delay(500);
 	}
 	if(next){
 		if(!isNextPressed){
-		nextPressedTime = millis();
+			nextPressedTime = millis();
 		}
 		isNextPressed = true;
 	} else {
@@ -102,6 +102,7 @@ void checkButton(){
 			isNextPressed = false;
 			if(millis() - nextPressedTime > 1000){
 				musicMode = musicMode == 1 ? 2 : 1;
+				//Following good be refactored
 				if(musicMode == 1){
 					myDFPlayer.playFolder(1, 1);
 				} else {
