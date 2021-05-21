@@ -1,4 +1,4 @@
-# Rose Music Player
+# Flower Player
 
 Music player built on top of DFPlayer Mini and ESP32 to play music during the day and white noise during the night
 
